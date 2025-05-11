@@ -85,14 +85,14 @@ struct ContentView: View {
 
     func infoCard(food: Food) -> some View {
         VStack(alignment: .leading, spacing: 12) {
-            // Header with food name
+            // Header 
             Text(food.name)
                 .font(.system(size: 18, weight: .bold))
                 .foregroundColor(.primary)
                 .lineLimit(2)
                 .padding(.bottom, 4)
             
-            // Divider between header and content
+            // Divider 
             Divider()
                 .background(Color(.systemGray4))
             
@@ -113,17 +113,17 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    // Nutrient value with unit indication
+                    // Nutrient value 
                     Text(String(format: "%.1f", nutrient.amount))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(.primary)
-                        + Text(" g") // Add appropriate unit here
+                        + Text(" g")
                         .font(.system(size: 14))
                         .foregroundColor(.secondary)
                 }
                 .padding(.vertical, 4)
                 
-                // Subtle divider between nutrients
+                // divider between nutrients
                 if nutrient.id != food.foodNutrients.last?.id {
                     Divider()
                         .background(Color(.systemGray5))
