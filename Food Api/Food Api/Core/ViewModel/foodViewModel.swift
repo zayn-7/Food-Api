@@ -1,6 +1,6 @@
 //
-//  CoinsViewModel.swift
-//  NetworkingApp
+//  FoodViewModel.swift
+//  FoodApi
 //
 //  Created by zayn on 10/05/25.
 //
