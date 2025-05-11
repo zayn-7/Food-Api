@@ -1,6 +1,6 @@
 //
 //  foodModel.swift
-//  NetworkingApp
+//  FoodApi
 //
 //  Created by zayn on 10/05/25.
 //
