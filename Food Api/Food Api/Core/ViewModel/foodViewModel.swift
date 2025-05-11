@@ -11,7 +11,7 @@ class FoodViewModel: ObservableObject {
     @Published var foods: [Food] = []
     
     func fetchFood (searchText: String) {
-        let urlString = "https://api.nal.usda.gov/fdc/v1/foods/search?query=\(searchText)&dataType=Branded&pageSize=10&pageNumber=0&sortBy=dataType.keyword&sortOrder=asc&api_key=bwYu9QZxI28qGR9Lbr3iOpbChp2aC2nd0T5Wq9UM"
+        let urlString = "https://api.nal.usda.gov/fdc/v1/foods/search?query=\(searchText)&dataType=Branded&pageSize=10&pageNumber=0&sortBy=dataType.keyword&sortOrder=asc&api_key="
         guard let url = URL(string: urlString) else { return  }
         
         print("Fetching Data")
