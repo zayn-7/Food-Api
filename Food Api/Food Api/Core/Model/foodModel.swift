@@ -13,14 +13,13 @@ struct Foods: Codable, Identifiable {
     let totalHits: Int
     let foods: [Food]
     
-    // Only decode the specific fields we need
     enum CodingKeys: String, CodingKey {
         case totalHits
         case foods
     }
 }
 
-// Food structure to match our needs
+// Food structure 
 struct Food: Identifiable, Codable {
     let id: Int
     let name: String
@@ -33,7 +32,7 @@ struct Food: Identifiable, Codable {
     }
 }
 
-// FoodNutrient simplified to match our needs
+// FoodNutrient simplified 
 struct FoodNutrient: Identifiable, Codable {
     let id = UUID()
     let name: String
@@ -50,15 +49,3 @@ struct FoodNutrient: Identifiable, Codable {
         amount = try container.decode(Double.self, forKey: .amount)
     }
 }
-
-//// Example usage
-//func decodeFoodsFromAPI(data: Data) -> [Food]? {
-//    do {
-//        let decoder = JSONDecoder()
-//        let response = try decoder.decode(APIResponse.self, from: data)
-//        return response.foods
-//    } catch {
-//        print("Error decoding JSON: \(error)")
-//        return nil
-//    }
-//}
